@@ -1,4 +1,4 @@
-FROM: debian:lastest
+FROM debian:jessie
 #
 MAINTAINER "Stephane Wartel" <devops@wartel.fr>
 
