@@ -12,7 +12,7 @@ if [ -z "${SSH_KEY}" ]; then
 fi
 
 echo "Adding your ssh public key to user jenkins"
-mkdir -p /home/jenkins/.ssh && \
+mkdir -p /home/jenkins/.ssh \
   && chmod go-rwx /home/jenkins/.ssh
 echo "${SSH_KEY}" > /home/jenkins/.ssh/authorized_keys \
   && chmod go-rw /home/jenkins/.ssh/authorized_keys
