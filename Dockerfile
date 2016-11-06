@@ -9,8 +9,10 @@ sudo
 
 ADD add-jenkins-user.sh /add-jenkins-user.sh
 ADD run-sshd.sh /run-sshd.sh
-RUN chmod +x /*.sh
-RUN mkdir -p /var/run/sshd
+RUN chmod +x /*.sh \
+  && mkdir -p /var/run/sshd \
+  && chmod 0755 /var/run/sshd \
+  && true
 
 EXPOSE 22
 CMD ["/run-sshd.sh"] 
