@@ -3,7 +3,8 @@
 echo "Creating user jenkins"
 useradd jenkins \
   && passwd -d  jenkins \
-  && mkdir -p /home/jenkins/.ssh
+  && mkdir -p /home/jenkins/.ssh \
+  && mkdir -p /home/jenkins/backups \
   && chown -R jenkins:jenkins /home/jenkins \
   && adduser jenkins sudo
 
